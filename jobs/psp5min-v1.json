@@ -1,0 +1,18 @@
+{
+  "name": "psp5min-v1",
+  "kind": "compete",
+  "workdir": "E:\\MV2-Pursuit\\work\\20261121T192141Z-science\\psp5min",
+  "image": "python:3.12",
+  "setup": ["pip install -q \"numpy>=1.26,<3\" \"cdflib>=1.3,<2\""],
+  "run": [
+    "cd /work && python -m py_compile p5min.py test_p5min.py > /out/compile.txt 2>&1; rc=$?; cat /out/compile.txt; sha256sum p5min.py test_p5min.py PREREG-v0.1.md | tee /out/sha256.txt; pip list 2>/dev/null | grep -iE '^(numpy|cdflib) ' | tee /out/versions.txt; exit $rc",
+    "cd /work && python -m unittest -v test_p5min > /out/tests.txt 2>&1; rc=$?; cat /out/tests.txt; exit $rc",
+    "cd /work && python p5min.py --data-dir /data --out-dir /out --budget-s 15000 > /out/run.txt 2>&1; rc=$?; grep -E '^P5MIN_(VERSION|PERIHELIA|TIMECHECK|D[0-9]+_|GRADES|BUDGET|WARN)' /out/run.txt | head -n 200; tail -n 40 /out/run.txt; exit $rc"
+  ],
+  "network": true,
+  "data_urls": [],
+  "data_key": "psp-fields-mag4-e1-e27",
+  "cpu": 2,
+  "memory_gb": 2,
+  "timeout_minutes": 300
+}
