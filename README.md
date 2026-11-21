@@ -15,6 +15,12 @@ The claim rests on two kinds of evidence, and this repository tests both:
    fluctuations are Alfvenic. Are the published wave trains more Alfvenic than ordinary
    fluctuations at nearby frequencies, and than chance peaks of the same statistic, within
    20 solar radii (E17-E27)? This uses SWEAP SPAN-i plasma moments with FIELDS magnetometer data.
+3. **Calibration** (`PREREG-amendment-0.1.1.md`, `curv/`). It was written after a second review
+   and before any result existed. It replaces psp5min's frequency rank test with one whose null
+   is the same in every band, and checks that in simulations. It also notes that the paper's
+   "sigma" is bounded by sqrt(n_b - 1) (Samuelson's inequality), so it is not a Gaussian
+   significance. It then measures the Gaussian false-alarm probability of each published peak,
+   using surrogate spectra drawn around a smooth fit to the window's own spectrum.
 
 Files:
 
@@ -23,9 +29,13 @@ Files:
 - `alfven/psp5alf.py` (0.1.0) imports `p5min.py` unchanged, adds SPAN-i velocity and density
   (CDAWeb HAPI), and measures cross helicity in time and in the same FFT bins. Tests:
   `alfven/test_psp5alf.py`.
+- `curv/psp5curv.py` (0.1.0) imports `p5min.py` unchanged. It computes the fixed-design local
+  statistic L2 and the null simulations (SIM-F, SIM-K, SIM-K0), the surrogate false-alarm
+  probabilities of the two published windows and a spectral-knee fit per window. Tests:
+  `curv/test_psp5curv.py`.
 - `jobs/` holds the exact job definitions that run them.
-- Results will appear under `results/` once each job has run, graded against its
-  pre-registration and reported whatever they show.
+- Results will appear under `results/` once each job has run. Each is graded against its
+  pre-registration and reported whatever it shows.
 
 Run it yourself (public data, Python 3.12, numpy, cdflib):
 
@@ -33,6 +43,7 @@ Run it yourself (public data, Python 3.12, numpy, cdflib):
 pip install numpy cdflib
 python psp5min/p5min.py --data-dir ./data --out-dir ./out
 python alfven/psp5alf.py --data-dir ./data-alf --out-dir ./out-alf
+python curv/psp5curv.py --data-dir ./data --out-dir ./out-curv
 ```
 
 Project of MV2 of Munim, Inc. (mv2@munimtech.com). Made with AI agents working in MV2's name;
