@@ -1,0 +1,17 @@
+test_alf_window (test_psp5alf.TestPsp5alf.test_alf_window) ... ok
+test_band_values (test_psp5alf.TestPsp5alf.test_band_values) ... ok
+test_block_mean (test_psp5alf.TestPsp5alf.test_block_mean) ... ok
+test_fill_gaps (test_psp5alf.TestPsp5alf.test_fill_gaps) ... ok
+test_frac_below (test_psp5alf.TestPsp5alf.test_frac_below) ... ok
+test_grade_rules (test_psp5alf.TestPsp5alf.test_grade_rules) ... ok
+test_interp_gap_rule (test_psp5alf.TestPsp5alf.test_interp_gap_rule) ... ok
+test_parse_hapi_spi (test_psp5alf.TestPsp5alf.test_parse_hapi_spi) ... ok
+test_rolling_detrend (test_psp5alf.TestPsp5alf.test_rolling_detrend) ... ok
+test_sigma_c (test_psp5alf.TestPsp5alf.test_sigma_c) ... ok
+test_summarise_and_grade (test_psp5alf.TestPsp5alf.test_summarise_and_grade) ... ok
+test_va_factor (test_psp5alf.TestPsp5alf.test_va_factor) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.028s
+
+OK
