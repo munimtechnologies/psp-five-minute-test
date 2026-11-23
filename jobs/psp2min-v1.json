@@ -1,0 +1,18 @@
+{
+  "name": "psp2min-v1",
+  "kind": "compete",
+  "workdir": "E:\\MV2-Pursuit\\work\\20261123T082423Z-science\\twomin",
+  "image": "python:3.12",
+  "setup": ["pip install -q \"numpy>=1.26,<3\" \"cdflib>=1.3,<2\""],
+  "run": [
+    "cd /work && G=https://raw.githubusercontent.com/munimtechnologies/psp-five-minute-test && curl -fsSL --retry 3 -o p5min.py $G/a025a506d2092e982e82e87c2c27e4f2a477fa98/psp5min/p5min.py && curl -fsSL --retry 3 -o psp5alf.py $G/f13f8d6dc800c9f5cf3212094a95d05a0e3dd2b0/alfven/psp5alf.py && printf '%s  %s\\n' 310727b815768e4937f606d72814db4d4bcf9106aa9a9b2fe8f1fea6351d05a4 p5min.py 6fc3e1fb0cd04bde5ec75eec7aee87ebae444469b5dfa84d76b2252e80dac18d psp5alf.py > /tmp/pins.txt && sha256sum -c /tmp/pins.txt; rc=$?; python -m py_compile p5min.py psp5alf.py psp2min.py test_psp2min.py > /out/compile.txt 2>&1 || rc=1; cat /out/compile.txt; sha256sum p5min.py psp5alf.py psp2min.py test_psp2min.py PREREG-2MIN-v0.1.md | tee /out/sha256.txt; pip list 2>/dev/null | grep -iE '^(numpy|cdflib) ' | tee /out/versions.txt; echo \"pins+compile rc=$rc\"; exit $rc",
+    "cd /work && python -m unittest -v test_psp2min > /out/tests.txt 2>&1; rc=$?; cat /out/tests.txt; exit $rc",
+    "cd /work && OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 python psp2min.py --data-dir /data --out-dir /out --budget-s 13000 > /out/run.txt 2>&1; rc=$?; grep -E '^P2MIN_(VERSION|K0|PERIHELIA|ENC|CLEAN_CUT|N_USABLE|R1|H1|H2|P0_DETAIL|TREND_A|TREND_B|TREND_B_ARITH|PEAK|GRADES|BUDGET)|^P5MIN_(TIMECHECK|WARN)|^PALF_WARN' /out/run.txt | head -n 220; tail -n 30 /out/run.txt; exit $rc"
+  ],
+  "network": true,
+  "data_urls": [],
+  "data_key": "psp-2min-e1-e27",
+  "cpu": 2,
+  "memory_gb": 2,
+  "timeout_minutes": 300
+}
