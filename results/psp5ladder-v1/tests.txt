@@ -1,0 +1,22 @@
+test_all_variants_find_injected_peak (test_psp5ladder.TestLadder.test_all_variants_find_injected_peak) ... ok
+test_baseline_hand_values (test_psp5ladder.TestLadder.test_baseline_hand_values) ... ok
+test_baseline_mean_std (test_psp5ladder.TestLadder.test_baseline_mean_std) ... ok
+test_detrend (test_psp5ladder.TestLadder.test_detrend) ... ok
+test_edge_windows (test_psp5ladder.TestLadder.test_edge_windows) ... ok
+test_excluding_peak_raises_s (test_psp5ladder.TestLadder.test_excluding_peak_raises_s) ... ok
+test_gappy_invalid (test_psp5ladder.TestLadder.test_gappy_invalid) ... ok
+test_grade_fragile_other_reading_edge (test_psp5ladder.TestLadder.test_grade_fragile_other_reading_edge) ... ok
+test_grade_missing_value_not_gradable (test_psp5ladder.TestLadder.test_grade_missing_value_not_gradable) ... ok
+test_grade_not_reproduced_selection (test_psp5ladder.TestLadder.test_grade_not_reproduced_selection) ... ok
+test_grade_stable_reproduced_robust (test_psp5ladder.TestLadder.test_grade_stable_reproduced_robust) ... ok
+test_samuelson_ceiling (test_psp5ladder.TestLadder.test_samuelson_ceiling) ... skipped 'peak outside baseline in this draw'
+test_scale_invariance_all_variants (test_psp5ladder.TestLadder.test_scale_invariance_all_variants) ... ok
+test_segment (test_psp5ladder.TestLadder.test_segment) ... ok
+test_spec_matches_p5min (test_psp5ladder.TestLadder.test_spec_matches_p5min) ... ok
+test_too_few_bins (test_psp5ladder.TestLadder.test_too_few_bins) ... ok
+test_v0_equals_p5min_statistic (test_psp5ladder.TestLadder.test_v0_equals_p5min_statistic) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.131s
+
+OK (skipped=1)

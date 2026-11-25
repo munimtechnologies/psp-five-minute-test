@@ -1,0 +1,71 @@
+{
+ "contract": "mv2-compete-result-v1",
+ "name": "psp5ladder-v1",
+ "id": "3f032514f3bc",
+ "field": "science",
+ "run": "20261122T031748Z-science",
+ "kind": "compete",
+ "status": "ok",
+ "reason": "",
+ "host": "dell",
+ "image": "python:3.12",
+ "started_at": "2026-11-25T19:46:44.743059+00:00",
+ "finished_at": "2026-11-25T20:04:12.555495+00:00",
+ "duration_seconds": 1047,
+ "limits": {
+  "cpu": 1.0,
+  "memory_gb": 1.0,
+  "timeout_minutes": 60.0
+ },
+ "peak_memory_gb": null,
+ "network": {
+  "setup": true,
+  "run": true
+ },
+ "steps": [
+  {
+   "step": "setup-01-pip",
+   "cmd": "pip install -q \"numpy>=1.26,<3\" \"cdflib>=1.3,<2\"",
+   "exit": 0,
+   "seconds": 8
+  },
+  {
+   "step": "run-01-cd",
+   "cmd": "cd /work && python -c \"import urllib.request; urllib.request.urlretrieve('https://raw.githubusercontent.com/munimtechnologies/psp-five-minute-test/a025a506d2092e982e82e87c2c27e4f2a477fa98/psp5min/p5min.py', 'p5min.py')\" && python -m py_compile p5min.py psp5ladder.py test_psp5ladder.py > /out/compile.txt 2>&1; rc=$?; cat /out/compile.txt; sha256sum p5min.py psp5ladder.py test_psp5ladder.py PREREG-a",
+   "exit": 0,
+   "seconds": 2
+  },
+  {
+   "step": "run-02-cd",
+   "cmd": "cd /work && python -m unittest -v test_psp5ladder > /out/tests.txt 2>&1; rc=$?; cat /out/tests.txt; exit $rc",
+   "exit": 0,
+   "seconds": 1
+  },
+  {
+   "step": "run-03-cd",
+   "cmd": "cd /work && python psp5ladder.py --data-dir /data --out-dir /out > /out/run.txt 2>&1; rc=$?; grep -E '^LADDER_' /out/run.txt | head -n 80; tail -n 20 /out/run.txt; exit $rc",
+   "exit": 0,
+   "seconds": 6
+  }
+ ],
+ "out_files": [
+  "compile.txt",
+  "edges.csv",
+  "results.json",
+  "run.txt",
+  "sha256.txt",
+  "tests.txt",
+  "variants.csv",
+  "versions.txt"
+ ],
+ "out_files_total": 8,
+ "out_skipped": [],
+ "upload_skipped": [],
+ "summary_tail": "[run-03-cd stdout] op\", \"shift_min\": 10, \"start\": \"2025-06-19T08:15:00Z\", \"stop\": \"2025-06-19T09:35:00Z\"}\nLADDER_GRADES: {\"RL0\": \"PASS\", \"RL1_detail\": {\"E22\": {\"min\": 4.8233831251309764, \"max\": 6.003508377496513, \"spread\": 1.1801252523655368, \"n\": 6}, \"E24\": {\"min\": 4.700101201088669, \"max\": 8.760672973013028, \"spread\": 4.060571771924359, \"n\": 6}}, \"RL1\": \"FRAGILE\", \"RL2_passing\": [\"V0\", \"V1\", \"V3\", \"V4\", \"V5\"], \"RL2_worst_abs_dS\": {\"V0\": 0.48529479776084994, \"V1\": 0.4988010589908942, \"V2\": 2.5606729730130278, \"V3\": 0.39579853948887944, \"V4\": 0.4157721467472726, \"V5\": 1.4998987989113308, \"V6\": 25.039154896051038}, \"RL2\": \"REPRODUCED\", \"RL2_selected\": \"V0\", \"RL3_detail\": {\"E22\": {\"S_V0\": 5.31470520223915, \"min\": 4.623767480094109, \"max\": 6.725729673349752, \"drop\": 0.6909377221450406, \"n\": 8}, \"E24\": {\"S_V0\": 6.148040941157423, \"min\": 5.26320694421924, \"max\": 6.246234491160533, \"drop\": 0.8848339969381831, \"n\": 8}}, \"RL3\": \"ROBUST\", \"MID_E22_reported\": {\"mid_arith_mhz\": 15.185185185185185, \"mid_arith_mhz_within_25pct\": false, \"mid_geo_mhz\": 9.176585646492905, \"mid_geo_mhz_within_25pct\": true, \"median_energy_mhz\": 8.024691358024691, \"median_energy_mhz_within_25pct\": true, \"paper_mhz\": 9.523809523809524}}\n",
+ "paths": {
+  "workdir": "/work (copy of E:\\MV2-Pursuit\\work\\20261122T031748Z-science\\ladder)",
+  "out": "/out -> out/",
+  "data": "/data (docker volume mv2c-data-psp-ladder-e22-e24, kept for later jobs)"
+ },
+ "note": ""
+}
