@@ -1,0 +1,70 @@
+{
+ "contract": "mv2-compete-result-v1",
+ "name": "psp2min-v1",
+ "id": "7f34d7ed491a",
+ "field": "science",
+ "run": "20261123T082423Z-science",
+ "kind": "compete",
+ "status": "ok",
+ "reason": "",
+ "host": "blade",
+ "image": "python:3.12",
+ "started_at": "2026-11-25T15:41:57.004111+00:00",
+ "finished_at": "2026-11-25T16:48:03.514155+00:00",
+ "duration_seconds": 3966,
+ "limits": {
+  "cpu": 2.0,
+  "memory_gb": 2.0,
+  "timeout_minutes": 300.0
+ },
+ "peak_memory_gb": 0.21,
+ "network": {
+  "setup": true,
+  "run": true
+ },
+ "steps": [
+  {
+   "step": "setup-01-pip",
+   "cmd": "pip install -q \"numpy>=1.26,<3\" \"cdflib>=1.3,<2\"",
+   "exit": 0,
+   "seconds": 5
+  },
+  {
+   "step": "run-01-cd",
+   "cmd": "cd /work && G=https://raw.githubusercontent.com/munimtechnologies/psp-five-minute-test && curl -fsSL --retry 3 -o p5min.py $G/a025a506d2092e982e82e87c2c27e4f2a477fa98/psp5min/p5min.py && curl -fsSL --retry 3 -o psp5alf.py $G/f13f8d6dc800c9f5cf3212094a95d05a0e3dd2b0/alfven/psp5alf.py && printf '%s  %s\\n' 310727b815768e4937f606d72814db4d4bcf9106aa9a9b2fe8f1fea6351d05a4 p5min.py 6fc3e1fb0cd04bde5ec75",
+   "exit": 0,
+   "seconds": 2
+  },
+  {
+   "step": "run-02-cd",
+   "cmd": "cd /work && python -m unittest -v test_psp2min > /out/tests.txt 2>&1; rc=$?; cat /out/tests.txt; exit $rc",
+   "exit": 0,
+   "seconds": 1
+  },
+  {
+   "step": "run-03-cd",
+   "cmd": "cd /work && OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 python psp2min.py --data-dir /data --out-dir /out --budget-s 13000 > /out/run.txt 2>&1; rc=$?; grep -E '^P2MIN_(VERSION|K0|PERIHELIA|ENC|CLEAN_CUT|N_USABLE|R1|H1|H2|P0_DETAIL|TREND_A|TREND_B|TREND_B_ARITH|PEAK|GRADES|BUDGET)|^P5MIN_(TIMECHECK|WARN)|^PALF_WARN' /out/run.txt | head -n 220; tail -n 30 /out/run.txt; exit $rc",
+   "exit": 0,
+   "seconds": 2718
+  }
+ ],
+ "out_files": [
+  "compile.txt",
+  "results.json",
+  "run.txt",
+  "sha256.txt",
+  "tests.txt",
+  "versions.txt",
+  "windows.csv"
+ ],
+ "out_files_total": 7,
+ "out_skipped": [],
+ "upload_skipped": [],
+ "summary_tail": "[run-03-cd stdout] n\": 29, \"gmean_s\": 107.07568237234138, \"log_sd\": 0.23937786292481922}\nP2MIN_TREND_B_ARITH: {\"tadv_lo\": 10, \"tadv_hi\": 12, \"n\": 43, \"gmean_s\": 135.17405558971424, \"log_sd\": 0.44018093705475575}\nP2MIN_TREND_B_ARITH: {\"tadv_lo\": 12, \"tadv_hi\": 15, \"n\": 76, \"gmean_s\": 178.89049931490234, \"log_sd\": 0.420519858554271}\nP2MIN_TREND_B_ARITH: {\"tadv_lo\": 15, \"tadv_hi\": 20, \"n\": 107, \"gmean_s\": 218.97366261479598, \"log_sd\": 0.4003428720409525}\nP2MIN_TREND_B_ARITH: {\"tadv_lo\": 20, \"tadv_hi\": 25, \"n\": 95, \"gmean_s\": 255.5582875986619, \"log_sd\": 0.3593598022466232}\nP2MIN_TREND_B_ARITH: {\"tadv_lo\": 25, \"tadv_hi\": 30, \"n\": 68, \"gmean_s\": 310.621653522138, \"log_sd\": 0.4099488627130306}\nP2MIN_TREND_B_ARITH: {\"tadv_lo\": 30, \"tadv_hi\": 40, \"n\": 73, \"gmean_s\": 326.6478426053244, \"log_sd\": 0.4814469590443989}\nP2MIN_TREND_B_ARITH: {\"tadv_lo\": 40, \"tadv_hi\": 60, \"n\": 18, \"gmean_s\": 426.57811420737664, \"log_sd\": 0.38797958274824157}\nP2MIN_TREND_B_ARITH: {\"tadv_lo\": 60, \"tadv_hi\": \"inf\", \"n\": 0, \"gmean_s\": NaN, \"log_sd\": NaN}\nP2MIN_PEAK: fpeak_at_floor_frac_B_young=0.04285714285714286 gmean_ppeak_B_young_s=333.8733321248363\nP2MIN_GRADES: {\"R1\": \"PASS\", \"H1\": \"CONSISTENT\", \"H2\": \"INTERMEDIATE\", \"P0\": \"PASS\"}\n",
+ "paths": {
+  "workdir": "/work (copy of E:\\MV2-Pursuit\\work\\20261123T082423Z-science\\twomin)",
+  "out": "/out -> out/",
+  "data": "/data (docker volume mv2c-data-psp-2min-e1-e27, kept for later jobs)"
+ },
+ "note": ""
+}

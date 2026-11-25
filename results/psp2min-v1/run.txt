@@ -1,0 +1,75 @@
+P2MIN_VERSION: 0.1.0 numpy 2.5.5 sha256 6155df987c8405722d353fc8e459c7e8d780ae036ccf545d718ccb56a034a60c p5min 0.1.0 310727b815768e4937f606d72814db4d4bcf9106aa9a9b2fe8f1fea6351d05a4 psp5alf 0.1.0 6fc3e1fb0cd04bde5ec75eec7aee87ebae444469b5dfa84d76b2252e80dac18d
+P2MIN_K0: f^-5/3 synthetic 1/f_mid = 664.2 s (11.07 min); paper's 4-h saturation ~13 min; f_lo = 0.3803 mHz
+P2MIN_PERIHELIA: n=27 numbering_ok=True E1=2018-11-06T01 E2=2019-04-04T20 E3=2019-09-01T15 E4=2020-01-29T08 E5=2020-06-07T07 E6=2020-09-27T09 E7=2021-01-17T17 E8=2021-04-29T08 E9=2021-08-09T18 E10=2021-11-21T08 E11=2022-02-25T15 E12=2022-06-01T23 E13=2022-09-06T06 E14=2022-12-11T12 E15=2023-03-17T20 E16=2023-06-22T03 E17=2023-09-27T23 E18=2023-12-29T00 E19=2024-03-30T02 E20=2024-06-30T03 E21=2024-09-30T05 E22=2024-12-24T11 E23=2025-03-22T22 E24=2025-06-19T09 E25=2025-09-15T20 E26=2025-12-13T07 E27=2026-03-11T18
+P5MIN_TIMECHECK: ours-minus-cdflib 0.0 (cdflib '2024-12-17T00:00:00.110806528')
+P2MIN_ENC: {"enc": 22, "perihelion": "2024-12-24T11:00:00Z", "windows": 84, "mag_ok": 84, "v_ok": 71, "usable": 71, "usable_frac": 0.8452, "clean_ok": 70, "spi_samples": 325730, "cached": false, "files": 15, "listed": 15, "samples": 5531805, "source": "cdas", "seconds": 129.9}
+P2MIN_ENC: {"enc": 27, "perihelion": "2026-03-11T18:00:00Z", "windows": 84, "mag_ok": 82, "v_ok": 61, "usable": 61, "usable_frac": 0.7262, "clean_ok": 58, "spi_samples": 508216, "cached": false, "files": 15, "listed": 15, "samples": 5426031, "source": "cdas", "seconds": 130.7}
+P2MIN_ENC: {"enc": 26, "perihelion": "2025-12-13T07:00:00Z", "windows": 84, "mag_ok": 84, "v_ok": 71, "usable": 71, "usable_frac": 0.8452, "clean_ok": 69, "spi_samples": 587816, "cached": false, "files": 15, "listed": 15, "samples": 5532032, "source": "cdas", "seconds": 147.6}
+P2MIN_ENC: {"enc": 25, "perihelion": "2025-09-15T20:00:00Z", "windows": 84, "mag_ok": 84, "v_ok": 84, "usable": 84, "usable_frac": 1.0, "clean_ok": 83, "spi_samples": 650956, "cached": false, "files": 15, "listed": 15, "samples": 5531616, "source": "cdas", "seconds": 151.8}
+P2MIN_ENC: {"enc": 24, "perihelion": "2025-06-19T09:00:00Z", "windows": 84, "mag_ok": 84, "v_ok": 67, "usable": 67, "usable_frac": 0.7976, "clean_ok": 64, "spi_samples": 548758, "cached": false, "files": 15, "listed": 15, "samples": 5526795, "source": "cdas", "seconds": 158.3}
+P2MIN_ENC: {"enc": 23, "perihelion": "2025-03-22T22:00:00Z", "windows": 84, "mag_ok": 84, "v_ok": 84, "usable": 84, "usable_frac": 1.0, "clean_ok": 82, "spi_samples": 397615, "cached": false, "files": 15, "listed": 15, "samples": 5527036, "source": "cdas", "seconds": 161.1}
+P2MIN_ENC: {"enc": 21, "perihelion": "2024-09-30T05:00:00Z", "windows": 84, "mag_ok": 82, "v_ok": 65, "usable": 65, "usable_frac": 0.7738, "clean_ok": 64, "spi_samples": 294798, "cached": false, "files": 14, "listed": 14, "samples": 5430099, "source": "cdas", "seconds": 163.3}
+P2MIN_ENC: {"enc": 20, "perihelion": "2024-06-30T03:00:00Z", "windows": 84, "mag_ok": 84, "v_ok": 64, "usable": 64, "usable_frac": 0.7619, "clean_ok": 60, "spi_samples": 291733, "cached": false, "files": 15, "listed": 15, "samples": 5531902, "source": "cdas", "seconds": 235.8}
+P2MIN_ENC: {"enc": 19, "perihelion": "2024-03-30T02:00:00Z", "windows": 84, "mag_ok": 84, "v_ok": 63, "usable": 63, "usable_frac": 0.75, "clean_ok": 63, "spi_samples": 295630, "cached": false, "files": 15, "listed": 15, "samples": 5531531, "source": "cdas", "seconds": 210.4}
+P2MIN_ENC: {"enc": 18, "perihelion": "2023-12-29T00:00:00Z", "windows": 84, "mag_ok": 82, "v_ok": 71, "usable": 71, "usable_frac": 0.8452, "clean_ok": 70, "spi_samples": 319851, "cached": false, "files": 15, "listed": 15, "samples": 5464225, "source": "cdas", "seconds": 132.2}
+P2MIN_ENC: {"enc": 17, "perihelion": "2023-09-27T23:00:00Z", "windows": 84, "mag_ok": 79, "v_ok": 55, "usable": 55, "usable_frac": 0.6548, "clean_ok": 51, "spi_samples": 277597, "cached": false, "files": 15, "listed": 15, "samples": 5238821, "source": "cdas", "seconds": 51.4}
+P2MIN_ENC: {"enc": 16, "perihelion": "2023-06-22T03:00:00Z", "windows": 84, "mag_ok": 84, "v_ok": 73, "usable": 73, "usable_frac": 0.869, "clean_ok": 70, "spi_samples": 373538, "cached": false, "files": 15, "listed": 15, "samples": 5527263, "source": "cdas", "seconds": 41.5}
+P2MIN_ENC: {"enc": 15, "perihelion": "2023-03-17T20:00:00Z", "windows": 84, "mag_ok": 84, "v_ok": 65, "usable": 65, "usable_frac": 0.7738, "clean_ok": 54, "spi_samples": 297735, "cached": false, "files": 15, "listed": 15, "samples": 5527329, "source": "cdas", "seconds": 39.3}
+P2MIN_ENC: {"enc": 14, "perihelion": "2022-12-11T12:00:00Z", "windows": 84, "mag_ok": 84, "v_ok": 84, "usable": 84, "usable_frac": 1.0, "clean_ok": 81, "spi_samples": 398530, "cached": false, "files": 15, "listed": 15, "samples": 5535367, "source": "cdas", "seconds": 41.6}
+P2MIN_ENC: {"enc": 13, "perihelion": "2022-09-06T06:00:00Z", "windows": 84, "mag_ok": 77, "v_ok": 79, "usable": 77, "usable_frac": 0.9167, "clean_ok": 74, "spi_samples": 389972, "cached": false, "files": 15, "listed": 15, "samples": 5235920, "source": "cdas", "seconds": 69.5}
+P2MIN_ENC: {"enc": 12, "perihelion": "2022-06-01T23:00:00Z", "windows": 84, "mag_ok": 83, "v_ok": 84, "usable": 83, "usable_frac": 0.9881, "clean_ok": 82, "spi_samples": 420515, "cached": false, "files": 15, "listed": 15, "samples": 5528583, "source": "cdas", "seconds": 47.2}
+P2MIN_ENC: {"enc": 11, "perihelion": "2022-02-25T15:00:00Z", "windows": 84, "mag_ok": 73, "v_ok": 68, "usable": 66, "usable_frac": 0.7857, "clean_ok": 65, "spi_samples": 339496, "cached": false, "files": 15, "listed": 15, "samples": 5052156, "source": "cdas", "seconds": 42.8}
+P2MIN_ENC: {"enc": 10, "perihelion": "2021-11-21T08:00:00Z", "windows": 84, "mag_ok": 83, "v_ok": 84, "usable": 83, "usable_frac": 0.9881, "clean_ok": 79, "spi_samples": 386933, "cached": false, "files": 15, "listed": 15, "samples": 5528775, "source": "cdas", "seconds": 66.6}
+P2MIN_ENC: {"enc": 9, "perihelion": "2021-08-09T18:00:00Z", "windows": 84, "mag_ok": 77, "v_ok": 78, "usable": 77, "usable_frac": 0.9167, "clean_ok": 76, "spi_samples": 355629, "cached": false, "files": 15, "listed": 15, "samples": 5226361, "source": "cdas", "seconds": 34.1}
+P2MIN_ENC: {"enc": 8, "perihelion": "2021-04-29T08:00:00Z", "windows": 84, "mag_ok": 78, "v_ok": 80, "usable": 78, "usable_frac": 0.9286, "clean_ok": 77, "spi_samples": 342991, "cached": false, "files": 15, "listed": 15, "samples": 5283919, "source": "cdas", "seconds": 32.2}
+P2MIN_ENC: {"enc": 7, "perihelion": "2021-01-17T17:00:00Z", "windows": 84, "mag_ok": 84, "v_ok": 84, "usable": 84, "usable_frac": 1.0, "clean_ok": 84, "spi_samples": 370671, "cached": false, "files": 15, "listed": 15, "samples": 5537076, "source": "cdas", "seconds": 35.7}
+P2MIN_ENC: {"enc": 6, "perihelion": "2020-09-27T09:00:00Z", "windows": 84, "mag_ok": 71, "v_ok": 79, "usable": 71, "usable_frac": 0.8452, "clean_ok": 70, "spi_samples": 338087, "cached": false, "files": 15, "listed": 15, "samples": 5248459, "source": "cdas", "seconds": 33.9}
+P2MIN_ENC: {"enc": 5, "perihelion": "2020-06-07T07:00:00Z", "windows": 84, "mag_ok": 83, "v_ok": 84, "usable": 83, "usable_frac": 0.9881, "clean_ok": 83, "spi_samples": 185369, "cached": false, "files": 15, "listed": 15, "samples": 5528703, "source": "cdas", "seconds": 31.4}
+P2MIN_ENC: {"enc": 4, "perihelion": "2020-01-29T08:00:00Z", "windows": 84, "mag_ok": 84, "v_ok": 69, "usable": 69, "usable_frac": 0.8214, "clean_ok": 69, "spi_samples": 144096, "cached": false, "files": 15, "listed": 15, "samples": 5536823, "source": "cdas", "seconds": 33.8}
+P2MIN_ENC: {"enc": 3, "perihelion": "2019-09-01T15:00:00Z", "windows": 84, "mag_ok": 82, "v_ok": 84, "usable": 82, "usable_frac": 0.9762, "clean_ok": 82, "spi_samples": 185379, "cached": false, "files": 15, "listed": 15, "samples": 5512441, "source": "cdas", "seconds": 32.0}
+P2MIN_ENC: {"enc": 2, "perihelion": "2019-04-04T20:00:00Z", "windows": 84, "mag_ok": 83, "v_ok": 69, "usable": 69, "usable_frac": 0.8214, "clean_ok": 69, "spi_samples": 141615, "cached": false, "files": 15, "listed": 15, "samples": 5525963, "source": "cdas", "seconds": 25.6}
+P2MIN_ENC: {"enc": 1, "perihelion": "2018-11-06T01:00:00Z", "windows": 84, "mag_ok": 82, "v_ok": 73, "usable": 71, "usable_frac": 0.8452, "clean_ok": 71, "spi_samples": 37433, "cached": false, "files": 15, "listed": 15, "samples": 5052199, "source": "cdas", "seconds": 26.0}
+P2MIN_CLEAN_CUT: {"E1_E19_usable": 1404, "after_cut": 1370, "removed_frac": 0.024216524216524205, "cut_used_for_grades": true, "paper_removed_frac": 0.03688539984224167}
+P2MIN_N_USABLE: {"A_E1_E19": 1370, "B_E20_E27": 550}
+P2MIN_R1: {"spearman_tadv_pmid": 0.5478010552367043, "n_young": 69, "gmean_young_s": 199.579290567799, "min_tadv_h": 3.58018016182479}
+P2MIN_H1: {"n_young": 70, "n_encounters": 8, "gmean_s": 154.59859270796133, "boot95_s": [142.4163794138423, 167.12371823325466], "per_encounter": {"20": {"n": 5, "gmean_s": 155.97213355104083}, "21": {"n": 1, "gmean_s": 170.77633607155684}, "22": {"n": 5, "gmean_s": 169.36356781511114}, "23": {"n": 5, "gmean_s": 131.45890068163843}, "24": {"n": 15, "gmean_s": 139.25866685452544}, "25": {"n": 8, "gmean_s": 140.82952462912274}, "26": {"n": 16, "gmean_s": 159.8335478324864}, "27": {"n": 15, "gmean_s": 176.552405634067}}, "gmean_arith_def_s": 89.68160416428577, "spearman_tadv_pmid_B": 0.6957928694653691, "min_tadv_h": 4.1982294206890325}
+P2MIN_H2: {"n_le7": 46, "gmean_le7_s": 138.36940339963346, "n_7_10": 93, "gmean_7_10_s": 197.38644930162172, "ratio": 0.7010076116633231, "B_only_ratio": 0.6763149725874691}
+P2MIN_P0_DETAIL: {"numbering_ok": true, "E1_E19_ge50pct": 19, "E20_E27_ge50pct": 8}
+P2MIN_TREND_A: {"tadv_lo": 0, "tadv_hi": 6, "n": 2, "gmean_s": 432.86581524315204, "log_sd": 0.06487779887127099}
+P2MIN_TREND_A: {"tadv_lo": 6, "tadv_hi": 7, "n": 15, "gmean_s": 149.35316687283654, "log_sd": 0.2928100140673505}
+P2MIN_TREND_A: {"tadv_lo": 7, "tadv_hi": 8, "n": 20, "gmean_s": 198.96060767573152, "log_sd": 0.37789668735191034}
+P2MIN_TREND_A: {"tadv_lo": 8, "tadv_hi": 10, "n": 32, "gmean_s": 218.25261599261253, "log_sd": 0.42169058735152093}
+P2MIN_TREND_A: {"tadv_lo": 10, "tadv_hi": 12, "n": 44, "gmean_s": 291.10249752896607, "log_sd": 0.37887986612169}
+P2MIN_TREND_A: {"tadv_lo": 12, "tadv_hi": 15, "n": 114, "gmean_s": 334.5624884542588, "log_sd": 0.36226391167637606}
+P2MIN_TREND_A: {"tadv_lo": 15, "tadv_hi": 20, "n": 311, "gmean_s": 393.2170514214566, "log_sd": 0.3420234041596834}
+P2MIN_TREND_A: {"tadv_lo": 20, "tadv_hi": 25, "n": 281, "gmean_s": 451.3590904376959, "log_sd": 0.32018782130615614}
+P2MIN_TREND_A: {"tadv_lo": 25, "tadv_hi": 30, "n": 253, "gmean_s": 489.45394388908267, "log_sd": 0.3102592531127341}
+P2MIN_TREND_A: {"tadv_lo": 30, "tadv_hi": 40, "n": 246, "gmean_s": 550.80723373338, "log_sd": 0.3170537594969129}
+P2MIN_TREND_A: {"tadv_lo": 40, "tadv_hi": 60, "n": 52, "gmean_s": 655.0838421568795, "log_sd": 0.2567061873497609}
+P2MIN_TREND_A: {"tadv_lo": 60, "tadv_hi": "inf", "n": 0, "gmean_s": NaN, "log_sd": NaN}
+P2MIN_TREND_B: {"tadv_lo": 0, "tadv_hi": 6, "n": 17, "gmean_s": 98.70177657010574, "log_sd": 0.17823339389272938}
+P2MIN_TREND_B: {"tadv_lo": 6, "tadv_hi": 7, "n": 12, "gmean_s": 167.8287250762703, "log_sd": 0.31932535353150643}
+P2MIN_TREND_B: {"tadv_lo": 7, "tadv_hi": 8, "n": 12, "gmean_s": 172.51378936329536, "log_sd": 0.29197001718460125}
+P2MIN_TREND_B: {"tadv_lo": 8, "tadv_hi": 10, "n": 29, "gmean_s": 185.7742757655118, "log_sd": 0.28204585411703714}
+P2MIN_TREND_B: {"tadv_lo": 10, "tadv_hi": 12, "n": 43, "gmean_s": 236.39411549962756, "log_sd": 0.414325773817805}
+P2MIN_TREND_B: {"tadv_lo": 12, "tadv_hi": 15, "n": 76, "gmean_s": 305.17455162753373, "log_sd": 0.3758336607805439}
+P2MIN_TREND_B: {"tadv_lo": 15, "tadv_hi": 20, "n": 107, "gmean_s": 359.9148034912407, "log_sd": 0.34294262504394}
+P2MIN_TREND_B: {"tadv_lo": 20, "tadv_hi": 25, "n": 95, "gmean_s": 413.4172156661794, "log_sd": 0.29817202895839834}
+P2MIN_TREND_B: {"tadv_lo": 25, "tadv_hi": 30, "n": 68, "gmean_s": 483.8816050044398, "log_sd": 0.3135688162161549}
+P2MIN_TREND_B: {"tadv_lo": 30, "tadv_hi": 40, "n": 73, "gmean_s": 500.1033926561299, "log_sd": 0.404482478660532}
+P2MIN_TREND_B: {"tadv_lo": 40, "tadv_hi": 60, "n": 18, "gmean_s": 599.3685232556988, "log_sd": 0.30432259068443274}
+P2MIN_TREND_B: {"tadv_lo": 60, "tadv_hi": "inf", "n": 0, "gmean_s": NaN, "log_sd": NaN}
+P2MIN_TREND_B_ARITH: {"tadv_lo": 0, "tadv_hi": 6, "n": 17, "gmean_s": 58.40799065444612, "log_sd": 0.16172987186543042}
+P2MIN_TREND_B_ARITH: {"tadv_lo": 6, "tadv_hi": 7, "n": 12, "gmean_s": 95.67390196347769, "log_sd": 0.27751750873282155}
+P2MIN_TREND_B_ARITH: {"tadv_lo": 7, "tadv_hi": 8, "n": 12, "gmean_s": 100.55127012793336, "log_sd": 0.2319959143678711}
+P2MIN_TREND_B_ARITH: {"tadv_lo": 8, "tadv_hi": 10, "n": 29, "gmean_s": 107.07568237234138, "log_sd": 0.23937786292481922}
+P2MIN_TREND_B_ARITH: {"tadv_lo": 10, "tadv_hi": 12, "n": 43, "gmean_s": 135.17405558971424, "log_sd": 0.44018093705475575}
+P2MIN_TREND_B_ARITH: {"tadv_lo": 12, "tadv_hi": 15, "n": 76, "gmean_s": 178.89049931490234, "log_sd": 0.420519858554271}
+P2MIN_TREND_B_ARITH: {"tadv_lo": 15, "tadv_hi": 20, "n": 107, "gmean_s": 218.97366261479598, "log_sd": 0.4003428720409525}
+P2MIN_TREND_B_ARITH: {"tadv_lo": 20, "tadv_hi": 25, "n": 95, "gmean_s": 255.5582875986619, "log_sd": 0.3593598022466232}
+P2MIN_TREND_B_ARITH: {"tadv_lo": 25, "tadv_hi": 30, "n": 68, "gmean_s": 310.621653522138, "log_sd": 0.4099488627130306}
+P2MIN_TREND_B_ARITH: {"tadv_lo": 30, "tadv_hi": 40, "n": 73, "gmean_s": 326.6478426053244, "log_sd": 0.4814469590443989}
+P2MIN_TREND_B_ARITH: {"tadv_lo": 40, "tadv_hi": 60, "n": 18, "gmean_s": 426.57811420737664, "log_sd": 0.38797958274824157}
+P2MIN_TREND_B_ARITH: {"tadv_lo": 60, "tadv_hi": "inf", "n": 0, "gmean_s": NaN, "log_sd": NaN}
+P2MIN_PEAK: fpeak_at_floor_frac_B_young=0.04285714285714286 gmean_ppeak_B_young_s=333.8733321248363
+P2MIN_GRADES: {"R1": "PASS", "H1": "CONSISTENT", "H2": "INTERMEDIATE", "P0": "PASS"}

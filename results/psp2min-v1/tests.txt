@@ -1,0 +1,16 @@
+test_analyse_encounter_and_summary (test_psp2min.TestPsp2min.test_analyse_encounter_and_summary) ... ok
+test_break_spectrum (test_psp2min.TestPsp2min.test_break_spectrum) ... ok
+test_f_lo (test_psp2min.TestPsp2min.test_f_lo) ... ok
+test_fill_gaps (test_psp2min.TestPsp2min.test_fill_gaps) ... ok
+test_gmean_boot (test_psp2min.TestPsp2min.test_gmean_boot) ... ok
+test_grades (test_psp2min.TestPsp2min.test_grades) ... ok
+test_kolmogorov_saturation (test_psp2min.TestPsp2min.test_kolmogorov_saturation) ... ok
+test_parseval_hann (test_psp2min.TestPsp2min.test_parseval_hann) ... ok
+test_spearman_and_rank (test_psp2min.TestPsp2min.test_spearman_and_rank) ... ok
+test_trend_detrend_insensitive (test_psp2min.TestPsp2min.test_trend_detrend_insensitive) ... ok
+test_window_plasma (test_psp2min.TestPsp2min.test_window_plasma) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.176s
+
+OK
