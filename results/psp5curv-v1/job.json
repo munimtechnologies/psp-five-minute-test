@@ -1,0 +1,44 @@
+{
+ "source": "E:\\MV2-Pursuit\\work\\20261121T231140Z-science\\compete\\psp5curv\\job.json",
+ "normalized": {
+  "id": "f04f09ddeb5c",
+  "name": "psp5curv-v1",
+  "job_path": "E:\\MV2-Pursuit\\work\\20261121T231140Z-science\\compete\\psp5curv\\job.json",
+  "run": "20261121T231140Z-science",
+  "field": "science",
+  "kind": "compete",
+  "workdir": "E:\\MV2-Pursuit\\work\\20261121T231140Z-science\\curv",
+  "image": "python:3.12",
+  "run_network": true,
+  "network": true,
+  "setup": [
+   {
+    "name": "setup-01-pip",
+    "cmd": "pip install -q \"numpy>=1.26,<3\" \"cdflib>=1.3,<2\"",
+    "timeout_seconds": 0
+   }
+  ],
+  "run_steps": [
+   {
+    "name": "run-01-cd",
+    "cmd": "cd /work && python -c \"import urllib.request; urllib.request.urlretrieve('https://raw.githubusercontent.com/munimtechnologies/psp-five-minute-test/a025a506d2092e982e82e87c2c27e4f2a477fa98/psp5min/p5min.py', 'p5min.py')\" && python -m py_compile p5min.py psp5curv.py test_psp5curv.py > /out/compile.txt 2>&1; rc=$?; cat /out/compile.txt; sha256sum p5min.py psp5curv.py test_psp5curv.py PREREG-amendment-0.1.1.md | tee /out/sha256.txt; pip list 2>/dev/null | grep -iE '^(numpy|cdflib) ' | tee /out/versions.txt; exit $rc",
+    "timeout_seconds": 0
+   },
+   {
+    "name": "run-02-cd",
+    "cmd": "cd /work && python -m unittest -v test_psp5curv > /out/tests.txt 2>&1; rc=$?; cat /out/tests.txt; exit $rc",
+    "timeout_seconds": 0
+   },
+   {
+    "name": "run-03-cd",
+    "cmd": "cd /work && python psp5curv.py --data-dir /data --out-dir /out --budget-s 13000 > /out/run.txt 2>&1; rc=$?; grep -E '^PCURV_(VERSION|W_INT|PERIHELIA|PUBLISHED|D135|D70|SIMS|GRADES|BUDGET|WARN|ENC)' /out/run.txt | head -n 120; tail -n 30 /out/run.txt; exit $rc",
+    "timeout_seconds": 0
+   }
+  ],
+  "data_urls": [],
+  "data_key": "psp-fields-mag4-e1-e27",
+  "cpu": 2.0,
+  "memory_gb": 2.0,
+  "timeout_minutes": 300.0
+ }
+}

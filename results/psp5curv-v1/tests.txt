@@ -1,0 +1,20 @@
+test_band_L_matches_p5min (test_psp5curv.TestPsp5curv.test_band_L_matches_p5min) ... ok
+test_gauss_isf (test_psp5curv.TestPsp5curv.test_gauss_isf) ... ok
+test_grade (test_psp5curv.TestPsp5curv.test_grade) ... ok
+test_knee_fit (test_psp5curv.TestPsp5curv.test_knee_fit) ... ok
+test_l2_exact_on_quadratic_log_spectrum (test_psp5curv.TestPsp5curv.test_l2_exact_on_quadratic_log_spectrum) ... ok
+test_l2_usable_and_band_table_70 (test_psp5curv.TestPsp5curv.test_l2_usable_and_band_table_70) ... ok
+test_prep_gap_rule (test_psp5curv.TestPsp5curv.test_prep_gap_rule) ... ok
+test_ranks_from (test_psp5curv.TestPsp5curv.test_ranks_from) ... ok
+test_s_batch_matches_analyse_window (test_psp5curv.TestPsp5curv.test_s_batch_matches_analyse_window) ... ok
+test_samuelson_ceiling_holds (test_psp5curv.TestPsp5curv.test_samuelson_ceiling_holds) ... ok
+test_sim_flat_l2_unbiased (test_psp5curv.TestPsp5curv.test_sim_flat_l2_unbiased) ... ok
+test_smooth_cubic_power_law (test_psp5curv.TestPsp5curv.test_smooth_cubic_power_law) ... ok
+test_spectrum_matches_p5min (test_psp5curv.TestPsp5curv.test_spectrum_matches_p5min) ... ok
+test_surrogate_test_runs (test_psp5curv.TestPsp5curv.test_surrogate_test_runs) ... ok
+test_w_int (test_psp5curv.TestPsp5curv.test_w_int) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 1.582s
+
+OK

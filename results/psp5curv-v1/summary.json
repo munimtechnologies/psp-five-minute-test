@@ -1,0 +1,71 @@
+{
+ "contract": "mv2-compete-result-v1",
+ "name": "psp5curv-v1",
+ "id": "f04f09ddeb5c",
+ "field": "science",
+ "run": "20261121T231140Z-science",
+ "kind": "compete",
+ "status": "ok",
+ "reason": "",
+ "host": "blade",
+ "image": "python:3.12",
+ "started_at": "2026-11-25T21:02:07.355841+00:00",
+ "finished_at": "2026-11-25T21:34:40.558481+00:00",
+ "duration_seconds": 1953,
+ "limits": {
+  "cpu": 2.0,
+  "memory_gb": 2.0,
+  "timeout_minutes": 300.0
+ },
+ "peak_memory_gb": 0.18,
+ "network": {
+  "setup": true,
+  "run": true
+ },
+ "steps": [
+  {
+   "step": "setup-01-pip",
+   "cmd": "pip install -q \"numpy>=1.26,<3\" \"cdflib>=1.3,<2\"",
+   "exit": 0,
+   "seconds": 4
+  },
+  {
+   "step": "run-01-cd",
+   "cmd": "cd /work && python -c \"import urllib.request; urllib.request.urlretrieve('https://raw.githubusercontent.com/munimtechnologies/psp-five-minute-test/a025a506d2092e982e82e87c2c27e4f2a477fa98/psp5min/p5min.py', 'p5min.py')\" && python -m py_compile p5min.py psp5curv.py test_psp5curv.py > /out/compile.txt 2>&1; rc=$?; cat /out/compile.txt; sha256sum p5min.py psp5curv.py test_psp5curv.py PREREG-amendment",
+   "exit": 0,
+   "seconds": 2
+  },
+  {
+   "step": "run-02-cd",
+   "cmd": "cd /work && python -m unittest -v test_psp5curv > /out/tests.txt 2>&1; rc=$?; cat /out/tests.txt; exit $rc",
+   "exit": 0,
+   "seconds": 2
+  },
+  {
+   "step": "run-03-cd",
+   "cmd": "cd /work && python psp5curv.py --data-dir /data --out-dir /out --budget-s 13000 > /out/run.txt 2>&1; rc=$?; grep -E '^PCURV_(VERSION|W_INT|PERIHELIA|PUBLISHED|D135|D70|SIMS|GRADES|BUDGET|WARN|ENC)' /out/run.txt | head -n 120; tail -n 30 /out/run.txt; exit $rc",
+   "exit": 0,
+   "seconds": 1093
+  }
+ ],
+ "out_files": [
+  "compile.txt",
+  "published.csv",
+  "results.json",
+  "run.txt",
+  "sha256.txt",
+  "tests.txt",
+  "versions.txt",
+  "windows.csv"
+ ],
+ "out_files_total": 8,
+ "out_skipped": [],
+ "upload_skipped": [],
+ "summary_tail": "[run-03-cd stdout] 926791, \"z\": -0.9981450915176645}, \"r_le_30\": {\"n\": 2071, \"mean_rank\": 5.002414292612265, \"z\": 0.04255254938542515}, \"A_E1_E24\": {\"n\": 6764, \"mean_rank\": 4.991573033707865, \"z\": -0.26842235711236834}, \"B_E25_E27\": {\"n\": 858, \"mean_rank\": 4.804195804195804, \"z\": -2.22132071846137}}, \"L2\": {\"all\": {\"n\": 7622, \"mean_rank\": 4.525190238782471, \"z\": 0.9598140540387851}, \"r_le_30\": {\"n\": 2071, \"mean_rank\": 4.5016900048285855, \"z\": 0.03356590361846157}, \"A_E1_E24\": {\"n\": 6764, \"mean_rank\": 4.543317563571851, \"z\": 1.5548416625282888}, \"B_E25_E27\": {\"n\": 858, \"mean_rank\": 4.382284382284382, \"z\": -1.504866859434504}}}}\nPCURV_SIMS: {\"F\": {\"n_windows\": 3931, \"n_rep\": 200, \"Z_L_mean\": 1.8772616479425346, \"Z_L_sd\": 0.9425323871158324, \"Z_L2_mean\": -0.024369191185038074, \"Z_L2_sd\": 1.0275496225669944}, \"K\": {\"n_windows\": 3931, \"n_rep\": 200, \"Z_L_mean\": 2.054733603011271, \"Z_L_sd\": 0.9700231223239053, \"Z_L2_mean\": 0.09108332674864267, \"Z_L2_sd\": 0.8703336933407313}, \"K0\": {\"n_windows\": 3931, \"n_rep\": 200, \"Z_L_mean\": 8.318140802522073, \"Z_L_sd\": 0.9504987118370726, \"Z_L2_mean\": 0.7894197179954466, \"Z_L2_sd\": 1.002863704184296}}\nPCURV_GRADES: {\"SIMGATE\": \"PASS\", \"H2c\": \"NO-EXCESS\", \"H4\": \"ORDINARY\"}\n",
+ "paths": {
+  "workdir": "/work (copy of E:\\MV2-Pursuit\\work\\20261121T231140Z-science\\curv)",
+  "out": "/out -> out/",
+  "data": "/data (docker volume mv2c-data-psp-fields-mag4-e1-e27, kept for later jobs)"
+ },
+ "note": ""
+}
