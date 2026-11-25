@@ -1,0 +1,20 @@
+test_binner (test_p5min.TestP5min.test_binner) ... ok
+test_clusters (test_p5min.TestP5min.test_clusters) ... ok
+test_gappy_window_rejected (test_p5min.TestP5min.test_gappy_window_rejected) ... ok
+test_hapi_parse (test_p5min.TestP5min.test_hapi_parse) ... ok
+test_injected_peak_found (test_p5min.TestP5min.test_injected_peak_found) ... ok
+test_layout (test_p5min.TestP5min.test_layout) ... ok
+test_local_ratio (test_p5min.TestP5min.test_local_ratio) ... ok
+test_longest_run (test_p5min.TestP5min.test_longest_run) ... ok
+test_nearest_bins (test_p5min.TestP5min.test_nearest_bins) ... ok
+test_overlap_pub (test_p5min.TestP5min.test_overlap_pub) ... ok
+test_perihelia (test_p5min.TestP5min.test_perihelia) ... ok
+test_rank_and_binom (test_p5min.TestP5min.test_rank_and_binom) ... ok
+test_spectrum_parseval (test_p5min.TestP5min.test_spectrum_parseval) ... ok
+test_time_offset (test_p5min.TestP5min.test_time_offset) ... ok
+test_time_offset_cdflib (test_p5min.TestP5min.test_time_offset_cdflib) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.102s
+
+OK
