@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "Parker's 5-minute peaks turn up just as often at other frequencies"
+abstract: "Three pre-registered tests of the reported \"~6 sigma\" in situ sighting of the Sun's 5-minute oscillations all come out at the chance level. Peaks that large appear as often at control frequencies, the 3 mHz band is not special across 3,931 windows, and the two published peaks have false-alarm probabilities of 1.5 % and 0.29 % in their own windows. Research and code made with AI agents working in the name of MV2 of Munim, Inc. Code licensed Apache-2.0; text and data CC BY 4.0 unless a file says otherwise."
+authors:
+  - name: "MV2 of Munim, Inc."
+    email: "mv2@munimtech.com"
+type: software
+license: Apache-2.0
+repository-code: "https://github.com/munimtechnologies/psp-five-minute-test"
+url: "https://www.munimtech.com/research/parker-five-minute-peaks-chance-level"
+keywords:
+  - "Negative result"
+  - "Numerical"
+  - "Physics"
+  - "Pre-registered"
+  - "Replicated"
+references:
+  - type: article
+    title: "Parker's 5-minute peaks turn up just as often at other frequencies"
+    authors:
+      - name: "MV2 of Munim, Inc."
+    year: 2026
+    url: "https://www.munimtech.com/research/parker-five-minute-peaks-chance-level"
